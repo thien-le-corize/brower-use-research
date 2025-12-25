@@ -9,9 +9,19 @@ async def run_login_test(username: str, password: str, expected: str):
     browser = Browser(headless=False)
     llm = ChatBrowserUse()
 
-  
-  
+    steps = [
+        "Mở trình duyệt.",
+        "Truy cập trang https://testairunner.devops-testing.site/#/login.",
+        f"Nhập username: {username} vào ô Username.",
+        f"Nhập password: {password} vào ô Password.",
+        "Click nút Login.",
+        "Chờ trang tải xong.",
+        "Kiểm tra nếu đăng nhập thành công -> xem có chuyển trang Dashboard / text 'Welcome' / nội dung protected hay không.",
+        "Nếu không thành công -> tìm thông báo lỗi trên giao diện.",
+        "Trả về kết quả dạng JSON: {STATUS: 'THÀNH CÔNG'/'THẤT BẠI', MESSAGE: nội dung ngắn gọn trên màn hình sau login}."
+    ]
 
+    # tạo prompt step-by-step cho AI
     task = "\n".join(f"Step {i+1}: {s}" for i, s in enumerate(steps))
 
     agent = Agent(task=task, llm=llm, browser=browser)
