@@ -13,6 +13,14 @@ Mục tiêu là mô phỏng thao tác **đăng nhập** như người dùng th�
 
 ---
 
+## 2. Tạo file `.env`
+
+Tạo file `.env` tại thư mục dự án:
+
+```env
+OPENAI_API_KEY=sk-proj-example
+BROWSER_USE_API_KEY=bu_9W_-example
+
 ## 2. Cài đặt môi trường
 
 ```bash
