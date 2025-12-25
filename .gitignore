@@ -1,0 +1,52 @@
+# =========================
+# Python virtual environment
+# =========================
+venv/
+.env.rc
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+*.swp
+*.DS_Store
+*.egg
+*.egg-info/
+dist/
+build/
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# =========================
+# Environment & Sensitive Keys
+# =========================
+.env
+*.env
+.env.local
+.env.*.local
+
+# =========================
+# Browser-use session/cache
+# =========================
+logs/
+output/
+screenshots/
+reports/
+*.log
+*.csv
+*.html
+*.pdf
+
+# =========================
+# IDE/Editor config
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# OS system files
+# =========================
+Thumbs.db
+.DS_Store
